@@ -1,11 +1,240 @@
 # create source schema file for first staging model
 # write in powershell terminal: dbt run-operation generate_source --args '{"schema_name": "nc_school_database", "generate_columns": true}'
 
-version: 2
-
 sources:
   - name: nc_school_database
     tables:
+      - name: gsnc_sma_processed_apps
+        columns:
+          - name: application_id
+          - name: application
+          - name: applicant
+          - name: applicant_id
+          - name: application_email
+          - name: program
+          - name: current_stage
+          - name: current_status
+          - name: last_submitted
+
+      - name: raw_nc_schools_active_report_sy_24_25
+        columns:
+          - name: primary_key
+          - name: school_number
+          - name: school_year
+          - name: school_name
+          - name: official_school_name
+          - name: lea_number
+          - name: lea_name
+          - name: name_prefix_description
+          - name: principal_first_name
+          - name: principal_middle_name
+          - name: principal_last_name
+          - name: principal_name_suffix
+          - name: principal_email
+          - name: address_line1
+          - name: address_line2
+          - name: city
+          - name: state
+          - name: zip_code_5
+          - name: zip_code_4
+          - name: phone_office_area
+          - name: phone_office_exch
+          - name: phone_office_line
+          - name: phone_fax_area
+          - name: phone_fax_exch
+          - name: phone_fax_line
+          - name: mailing_address_line1
+          - name: mailing_address_line2
+          - name: mailing_city
+          - name: mailing_state
+          - name: mailing_zip_code_5
+          - name: mailing_zip_code_4
+          - name: url_school_address
+          - name: sch_operational_status
+          - name: sch_operational_status_desc
+          - name: opening_effective_date
+          - name: closing_date
+          - name: school_type
+          - name: school_type_desc
+          - name: school_program_type
+          - name: school_program_type_desc
+          - name: grade_level_current
+          - name: grade_level_approved
+          - name: grade_level_first_year
+          - name: title_i
+          - name: school_calendar_type
+          - name: school_calendar_description
+          - name: extended_hours
+          - name: school_schedule_type
+          - name: school_schedule_type_desc
+          - name: school_designation_type
+          - name: school_designation_desc
+          - name: virtual_status
+          - name: sbe_region
+          - name: sbe_region_names
+          - name: accreditation_status
+          - name: accreditation_status_desc
+          - name: federal_school_number
+          - name: college_board_number
+          - name: school_membership
+          - name: school_year_for_sch_membership
+          - name: school_teacher_count
+          - name: school_year_for_teachers
+          - name: cooperative_innovative_hs
+          - name: cooperative_mmyyyy_sbe_approve
+          - name: first_yr_est_adm
+          - name: first_yr_est_paid_teacher_fte
+          - name: newly_constructed_facility
+          - name: occupancy_date
+          - name: what_facility_will_sch_occupy
+          - name: share_space
+          - name: share_space_describe
+          - name: new_sch_population_from
+          - name: list_of_closing_schools
+          - name: county_code
+          - name: county_description
+          - name: opening_in_school_year
+          - name: locale_type
+          - name: locale_type_desc
+          - name: school_closings
+          - name: school_systartstatus
+          - name: record_created_timestamp
+          - name: record_created_by
+          - name: last_changed_timestamp
+          - name: last_changed_by
+
+      - name: raw_nc_schools_enrollment_charter_race_gender_sy_21_22
+        columns:
+          - name: year
+          - name: cs
+          - name: charter_school_name
+          - name: indianmale
+          - name: indianfemale
+          - name: asianmale
+          - name: asianfemale
+          - name: hispanicmale
+          - name: hispanicfemale
+          - name: blackmale
+          - name: blackfemale
+          - name: whitemale
+          - name: whitefemale
+          - name: two_or_more_racesmale
+          - name: two_or_more_racesfemale
+          - name: pacificislandmale
+          - name: pacificislandfemale
+          - name: total
+
+      - name: raw_nc_schools_enrollment_charter_race_gender_sy_22_23
+        columns:
+          - name: year
+          - name: cs
+          - name: charter_school_name
+          - name: indianmale
+          - name: indianfemale
+          - name: asianmale
+          - name: asianfemale
+          - name: hispanicmale
+          - name: hispanicfemale
+          - name: blackmale
+          - name: blackfemale
+          - name: whitemale
+          - name: whitefemale
+          - name: two_or_more_racesmale
+          - name: two_or_more_racesfemale
+          - name: pacificislandmale
+          - name: pacificislandfemale
+          - name: total
+
+      - name: raw_nc_schools_enrollment_charter_race_gender_sy_23_24
+        columns:
+          - name: year
+          - name: cs
+          - name: charter_school_name
+          - name: indianmale
+          - name: indianfemale
+          - name: asianmale
+          - name: asianfemale
+          - name: hispanicmale
+          - name: hispanicfemale
+          - name: blackmale
+          - name: blackfemale
+          - name: whitemale
+          - name: whitefemale
+          - name: two_or_more_racesmale
+          - name: two_or_more_racesfemale
+          - name: pacificislandmale
+          - name: pacificislandfemale
+          - name: total
+
+      - name: raw_nc_schools_enrollment_traditional_race_gender_sy_21_22
+        columns:
+          - name: year
+          - name: lea
+          - name: ____lea_name____
+          - name: school
+          - name: ___school_name___
+          - name: indian_male
+          - name: indian_female
+          - name: asian_male
+          - name: asian_female
+          - name: hispanic_male
+          - name: hispanic_female
+          - name: black_male
+          - name: black_female
+          - name: white_male
+          - name: white_female
+          - name: pacific_island_male
+          - name: pacific_island_female
+          - name: two_or__more_male
+          - name: two_or__more_female
+          - name: total
+
+      - name: raw_nc_schools_enrollment_traditional_race_gender_sy_22_23
+        columns:
+          - name: year
+          - name: lea
+          - name: ____lea_name____
+          - name: school
+          - name: ___school_name___
+          - name: indian_male
+          - name: indian_female
+          - name: asian_male
+          - name: asian_female
+          - name: hispanic_male
+          - name: hispanic_female
+          - name: black_male
+          - name: black_female
+          - name: white_male
+          - name: white_female
+          - name: pacific_island_male
+          - name: pacific_island_female
+          - name: two_or__more_male
+          - name: two_or__more_female
+          - name: total
+
+      - name: raw_nc_schools_enrollment_traditional_race_gender_sy_23_24
+        columns:
+          - name: year
+          - name: lea
+          - name: ____lea_name____
+          - name: school
+          - name: ___school_name___
+          - name: indian_male
+          - name: indian_female
+          - name: asian_male
+          - name: asian_female
+          - name: hispanic_male
+          - name: hispanic_female
+          - name: black_male
+          - name: black_female
+          - name: white_male
+          - name: white_female
+          - name: pacific_island_male
+          - name: pacific_island_female
+          - name: two_or__more_male
+          - name: two_or__more_female
+          - name: total
+
       - name: raw_nc_schools_perf_disagg_sy_21_22
         columns:
           - name: school_code
@@ -141,8 +370,11 @@ sources:
           - name: title_1
           - name: subgroup
           - name: spg_grade
+          - name: spg_grade
           - name: spg_score
           - name: ach_score
+          - name: ach_score
+          - name: eg_score
           - name: eg_score
           - name: eg_status
           - name: eg_index
@@ -169,4 +401,3 @@ sources:
           - name: k2_feeder
           - name: use_3yr
           - name: use_alt_weight
-
