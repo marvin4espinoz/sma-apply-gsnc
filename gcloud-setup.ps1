@@ -20,3 +20,4 @@ Write-Host "Google Cloud SDK environment setup complete."
 
 # to run this, type into powershell terminal:
 # . C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\gcloud-setup.ps1
+# reminder on how to activate virtual environment: .\env_311\Scripts\Activate.ps1
