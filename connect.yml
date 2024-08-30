@@ -1,0 +1,9 @@
+#yaml file connect.yaml for python script to grab application data from surveymonkey: apply
+
+server: "https://gsnc.smapply.us"
+clientId: 'XMiwNcm08erf2w0hUqu7Gy42CyoAFyrrsfxEAz0o'
+clientSecret: 'uXkxdVF42G0Yd6t4ssXgxyj1oBIOGbzVRRia9rYxQIoIqWXER3Wz6gOCGQJQmkvgXgOIC58KuLiUzDLxuMNtLhKDLv5VbAImQ7gfw6af5AOAxvfVzqiLr2ds81DuDQxz'
+refreshToken: '23fcac538298105d29b1de6a40eed8fdf0fbb70c'
+accessToken: '97f90b6b9aacbd5aecc82794121530619b40de93'
+
+# base_url = 'https://gsnc.smapply.com/api/programs/'

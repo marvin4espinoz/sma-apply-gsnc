@@ -1,0 +1,35 @@
+# path to profiles.yml file: C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\gsnc_dbt_project\profiles.yml
+# put this in terminal before running run-operations: set DBT_PROFILES_DIR=C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\gsnc_dbt_project
+#profiles.yml --> this is the profile that connects dbt to your google bigquery database (dataset = database; project = datawarehouse)
+
+# if you create your profiles.yml file and don't move it to the .dbt location, then you will need to do the following at the outset of a session:
+# in your termina, write: $env:DBT_PROFILES_DIR = "C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\gsnc_dbt_project"
+
+#check connection to google bigquery and tables available:
+# type in powershell terminal: dbt list --profiles-dir .
+
+#if i use 'dbt run', dbt will use this profile by default:
+gsnc_dbt_project:
+  outputs:
+    dev:
+      dataset: nc_school_database
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: gsnc-datawarehouse-v1
+      threads: 60
+      type: bigquery
+  #when i create my production tables
+#  production:
+#      dataset: gsnc_production
+#      job_execution_timeout_seconds: 300
+#      job_retries: 1
+#      location: US
+#      method: oauth
+#      priority: interactive
+#      project: gsnc-datawarehouse-v1
+#      threads: 60
+#      type: bigquery
+  target: dev

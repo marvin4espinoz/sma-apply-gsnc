@@ -1,0 +1,172 @@
+# create source schema file for first staging model
+# write in powershell terminal: dbt run-operation generate_source --args '{"schema_name": "nc_school_database", "generate_columns": true}'
+
+version: 2
+
+sources:
+  - name: nc_school_database
+    tables:
+      - name: raw_nc_schools_perf_disagg_sy_21_22
+        columns:
+          - name: school_code
+          - name: school_name
+          - name: grade_span
+          - name: subject
+          - name: grade
+          - name: type
+          - name: subgroup
+          - name: num_tested
+          - name: pct_notprof
+          - name: pct_l3
+          - name: pct_l4
+          - name: pct_l5
+          - name: pct_ccr
+          - name: pct_glp
+          - name: avg_score
+
+      - name: raw_nc_schools_perf_disagg_sy_22_23
+        columns:
+          - name: school_code
+          - name: school_name
+          - name: grade_span
+          - name: subject
+          - name: grade
+          - name: type
+          - name: subgroup
+          - name: num_tested
+          - name: pct_notprof
+          - name: pct_l3
+          - name: pct_l4
+          - name: pct_l5
+          - name: pct_ccr
+          - name: pct_glp
+          - name: avg_score
+
+      - name: raw_nc_schools_spg_overall_sy_21_22
+        columns:
+          - name: district_name
+          - name: school_code
+          - name: school_name
+          - name: state_board_region
+          - name: grade_span
+          - name: title_one_served
+          - name: percent_eds
+          - name: school_performance_grade
+          - name: school_performance_score
+          - name: school_achievement_score
+          - name: school_growth_score
+          - name: school_growth_status
+          - name: school_growth_index
+          - name: academic_assessment_math_rdg
+          - name: science_eog_score
+          - name: english_learner_progress_score
+          - name: four_year_cohort_graduation_rate_score
+          - name: biology_eoc_score
+          - name: act_workkeys_assessment
+          - name: passing_nc_math_three_course_score
+
+      - name: raw_nc_schools_spg_overall_sy_22_23
+        columns:
+          - name: district_name
+          - name: school_code
+          - name: school_name
+          - name: state_board_region
+          - name: grade_span
+          - name: title_one_served
+          - name: percent_eds
+          - name: school_performance_grade
+          - name: school_performance_score
+          - name: school_achievement_score
+          - name: school_growth_score
+          - name: school_growth_status
+          - name: school_growth_index
+          - name: academic_assessment_math_rdg
+          - name: science_eog_score
+          - name: english_learner_progress_score
+          - name: four_year_cohort_graduation_rate_score
+          - name: biology_eoc_score
+          - name: act_workkeys_assessment
+          - name: passing_nc_math_three_course_score
+
+      - name: raw_nc_schools_spg_subgroup_sy_21_22
+        columns:
+          - name: reporting_year
+          - name: lea_code
+          - name: lea_name
+          - name: school_code
+          - name: school_name
+          - name: sbe_region
+          - name: grade_span
+          - name: title_1
+          - name: subgroup
+          - name: spg_grade
+          - name: spg_score
+          - name: ach_score
+          - name: eg_score
+          - name: eg_status
+          - name: eg_index
+          - name: rd_spg_grade
+          - name: rd_spg_score
+          - name: rdgs_ach_score
+          - name: rd_eg_score
+          - name: rd_eg_status
+          - name: rd_eg_index
+          - name: ma_spg_grade
+          - name: ma_spg_score
+          - name: mags_ach_score
+          - name: ma_eg_score
+          - name: ma_eg_status
+          - name: ma_eg_index
+          - name: aaa_score
+          - name: scgs_score
+          - name: elp_score
+          - name: cgrs_score
+          - name: bi_score
+          - name: awa_score
+          - name: mcr_score
+          - name: asm_option
+          - name: k2_feeder
+          - name: use_3yr
+          - name: use_alt_weight
+
+      - name: raw_nc_schools_spg_subgroup_sy_22_23
+        columns:
+          - name: reporting_year
+          - name: lea_code
+          - name: lea_name
+          - name: school_code
+          - name: school_name
+          - name: sbe_region
+          - name: grade_span
+          - name: title_1
+          - name: subgroup
+          - name: spg_grade
+          - name: spg_score
+          - name: ach_score
+          - name: eg_score
+          - name: eg_status
+          - name: eg_index
+          - name: rd_spg_grade
+          - name: rd_spg_score
+          - name: rdgs_ach_score
+          - name: rd_eg_score
+          - name: rd_eg_status
+          - name: rd_eg_index
+          - name: ma_spg_grade
+          - name: ma_spg_score
+          - name: mags_ach_score
+          - name: ma_eg_score
+          - name: ma_eg_status
+          - name: ma_eg_index
+          - name: aaa_score
+          - name: scgs_score
+          - name: elp_score
+          - name: cgrs_score
+          - name: bi_score
+          - name: awa_score
+          - name: mcr_score
+          - name: asm_option
+          - name: k2_feeder
+          - name: use_3yr
+          - name: use_alt_weight
+

@@ -13,7 +13,7 @@ gcloud version
 gcloud auth list
 
 # If you need to reauthenticate, uncomment and run the following line:
-# $scopes = "https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/iam.test"
-# gcloud auth application-default login --scopes=$scopes
+$scopes = "https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/iam.test"
+gcloud auth application-default login --scopes=$scopes
 
 Write-Host "Google Cloud SDK environment setup complete."
