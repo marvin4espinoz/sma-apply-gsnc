@@ -17,3 +17,6 @@ $scopes = "https://www.googleapis.com/auth/cloud-platform,https://www.googleapis
 gcloud auth application-default login --scopes=$scopes
 
 Write-Host "Google Cloud SDK environment setup complete."
+
+# to run this, type into powershell terminal:
+# . C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\gcloud-setup.ps1
