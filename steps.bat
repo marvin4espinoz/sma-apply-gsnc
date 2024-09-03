@@ -32,7 +32,7 @@ REM 4.0 - now we need to download and install google sdk cli
 
 REM 5.0 - go through steps to get authenticated using credentials via web browser
 REM 5.1 - verify google cloud sdk installation: C:\Users\[YourUsername]\AppData\Local\Google\Cloud SDK
-REM 5.2 - add google cloud sdk to PATH: 
+REM 5.2 - add google cloud sdk to PATH:
 $env:PATH += ";C:\Users\MarvinEspinoza-Leiva\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin"
 
 REM 5.3 - set up authentication scopes
@@ -75,8 +75,8 @@ REM 5.9 - when you close and re-open PowersShell: (# = comments in powershell)
 
     REM Write-Host "Google Cloud SDK environment setup complete."
 
-REM 5.9.1 - Note on reauthenticating -- 
-    REM You can save this script as gcloud-setup.ps1 in a convenient location. 
+REM 5.9.1 - Note on reauthenticating --
+    REM You can save this script as gcloud-setup.ps1 in a convenient location.
     REM Then, whenever you open a new PowerShell session and want to work with Google Cloud SDK, you can run:
 . C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\gcloud-setup.ps1
 
@@ -87,3 +87,5 @@ $env:BIGQUERY_PROJECT="gsnc-datawarehouse-v1"
 
 
 
+REM if i wanted to run this python script in my powershell without any intervention:
+REM C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\env_311\Scripts\python.exe C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\sma_gsnc_v1.py

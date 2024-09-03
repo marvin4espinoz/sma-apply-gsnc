@@ -1,3 +1,7 @@
+#python file: sma_gsnc_v1.py
+#specific path: C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\sma_gsnc_v1.py
+#need to run within python virtual environment: C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\env_311\Scripts\python.exe
+
 import requests
 import yaml
 import json
@@ -98,7 +102,7 @@ def upload_to_bigquery(df, project_id, dataset_id, table_id):
 
 
 def main():
-    connect = SMApplyConnect('connect.yml')
+    connect = SMApplyConnect(r'C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\connect.yml')
     params = {'per_page': 100}
     applications = connect.get_applications(params)
 
