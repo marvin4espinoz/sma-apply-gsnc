@@ -1,0 +1,385 @@
+## schema for staging models (basially: the "sources" file but for dbt staging models, instead of the raw source schema which is "sources.yml")
+
+#staging models - data models
+# to spit these out:
+# dbt run-operation generate_model_yaml --args '{"model_names": ["int__perf_disagg_wide", "int__spg_subgroup_wide"]}'
+# to just run the staging models:
+# dbt test --models models/intermediate/
+
+version: 2
+
+models:
+  - name: int__perf_disagg_wide
+    description: ""
+    columns:
+      - name: reporting_year
+        description: ""
+
+      - name: school_code
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: grade_span
+        description: ""
+
+      - name: subject
+        description: ""
+
+      - name: grade
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: all_num_tested
+        description: ""
+
+      - name: all_pct_notprof
+        description: ""
+
+      - name: all_pct_l3
+        description: ""
+
+      - name: all_pct_l4
+        description: ""
+
+      - name: all_pct_l5
+        description: ""
+
+      - name: all_pct_ccr
+        description: ""
+
+      - name: all_pct_glp
+        description: ""
+
+      - name: blck_num_tested
+        description: ""
+
+      - name: blck_pct_notprof
+        description: ""
+
+      - name: blck_pct_l3
+        description: ""
+
+      - name: blck_pct_l4
+        description: ""
+
+      - name: blck_pct_l5
+        description: ""
+
+      - name: blck_pct_ccr
+        description: ""
+
+      - name: blck_pct_glp
+        description: ""
+
+      - name: eds_num_tested
+        description: ""
+
+      - name: eds_pct_notprof
+        description: ""
+
+      - name: eds_pct_l3
+        description: ""
+
+      - name: eds_pct_l4
+        description: ""
+
+      - name: eds_pct_l5
+        description: ""
+
+      - name: eds_pct_ccr
+        description: ""
+
+      - name: eds_pct_glp
+        description: ""
+
+      - name: els_num_tested
+        description: ""
+
+      - name: els_pct_notprof
+        description: ""
+
+      - name: els_pct_l3
+        description: ""
+
+      - name: els_pct_l4
+        description: ""
+
+      - name: els_pct_l5
+        description: ""
+
+      - name: els_pct_ccr
+        description: ""
+
+      - name: els_pct_glp
+        description: ""
+
+      - name: hisp_num_tested
+        description: ""
+
+      - name: hisp_pct_notprof
+        description: ""
+
+      - name: hisp_pct_l3
+        description: ""
+
+      - name: hisp_pct_l4
+        description: ""
+
+      - name: hisp_pct_l5
+        description: ""
+
+      - name: hisp_pct_ccr
+        description: ""
+
+      - name: hisp_pct_glp
+        description: ""
+
+      - name: swd_num_tested
+        description: ""
+
+      - name: swd_pct_notprof
+        description: ""
+
+      - name: swd_pct_l3
+        description: ""
+
+      - name: swd_pct_l4
+        description: ""
+
+      - name: swd_pct_l5
+        description: ""
+
+      - name: swd_pct_ccr
+        description: ""
+
+      - name: swd_pct_glp
+        description: ""
+
+      - name: whte_num_tested
+        description: ""
+
+      - name: whte_pct_notprof
+        description: ""
+
+      - name: whte_pct_l3
+        description: ""
+
+      - name: whte_pct_l4
+        description: ""
+
+      - name: whte_pct_l5
+        description: ""
+
+      - name: whte_pct_ccr
+        description: ""
+
+      - name: whte_pct_glp
+        description: ""
+
+  - name: int__spg_subgroup_wide
+    description: ""
+    columns:
+      - name: reporting_year_use
+        description: ""
+
+      - name: lea_code
+        description: ""
+
+      - name: lea_name
+        description: ""
+
+      - name: school_code
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: grade_span
+        description: ""
+
+      - name: title_1
+        description: ""
+
+      - name: spg_grade_all
+        description: ""
+
+      - name: spg_score_all
+        description: ""
+
+      - name: ach_score_all
+        description: ""
+
+      - name: eg_score_all
+        description: ""
+
+      - name: eg_status_all
+        description: ""
+
+      - name: eg_index_all
+        description: ""
+
+      - name: spg_grade_amin
+        description: ""
+
+      - name: spg_score_amin
+        description: ""
+
+      - name: ach_score_amin
+        description: ""
+
+      - name: eg_score_amin
+        description: ""
+
+      - name: eg_status_amin
+        description: ""
+
+      - name: eg_index_amin
+        description: ""
+
+      - name: spg_grade_asia
+        description: ""
+
+      - name: spg_score_asia
+        description: ""
+
+      - name: ach_score_asia
+        description: ""
+
+      - name: eg_score_asia
+        description: ""
+
+      - name: eg_status_asia
+        description: ""
+
+      - name: eg_index_asia
+        description: ""
+
+      - name: spg_grade_blck
+        description: ""
+
+      - name: spg_score_blck
+        description: ""
+
+      - name: ach_score_blck
+        description: ""
+
+      - name: eg_score_blck
+        description: ""
+
+      - name: eg_status_blck
+        description: ""
+
+      - name: eg_index_blck
+        description: ""
+
+      - name: spg_grade_hisp
+        description: ""
+
+      - name: spg_score_hisp
+        description: ""
+
+      - name: ach_score_hisp
+        description: ""
+
+      - name: eg_score_hisp
+        description: ""
+
+      - name: eg_status_hisp
+        description: ""
+
+      - name: eg_index_hisp
+        description: ""
+
+      - name: spg_grade_mult
+        description: ""
+
+      - name: spg_score_mult
+        description: ""
+
+      - name: ach_score_mult
+        description: ""
+
+      - name: eg_score_mult
+        description: ""
+
+      - name: eg_status_mult
+        description: ""
+
+      - name: eg_index_mult
+        description: ""
+
+      - name: spg_grade_whte
+        description: ""
+
+      - name: spg_score_whte
+        description: ""
+
+      - name: ach_score_whte
+        description: ""
+
+      - name: eg_score_whte
+        description: ""
+
+      - name: eg_status_whte
+        description: ""
+
+      - name: eg_index_whte
+        description: ""
+
+      - name: spg_grade_eds
+        description: ""
+
+      - name: spg_score_eds
+        description: ""
+
+      - name: ach_score_eds
+        description: ""
+
+      - name: eg_score_eds
+        description: ""
+
+      - name: eg_status_eds
+        description: ""
+
+      - name: eg_index_eds
+        description: ""
+
+      - name: spg_grade_els
+        description: ""
+
+      - name: spg_score_els
+        description: ""
+
+      - name: ach_score_els
+        description: ""
+
+      - name: eg_score_els
+        description: ""
+
+      - name: eg_status_els
+        description: ""
+
+      - name: eg_index_els
+        description: ""
+
+      - name: spg_grade_swd
+        description: ""
+
+      - name: spg_score_swd
+        description: ""
+
+      - name: ach_score_swd
+        description: ""
+
+      - name: eg_score_swd
+        description: ""
+
+      - name: eg_status_swd
+        description: ""
+
+      - name: eg_index_swd
+        description: ""

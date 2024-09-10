@@ -1,6 +1,19 @@
-application_id,application,applicant,applicant_id,application_email,program,current_stage,current_status,last_submitted
-SQS-9217706159,"Test, Test",Maria Neri,205833,mneri@surveymonkey.com,School Quality Supports - Fall 2024 - Cohort,Review and Score - Applications that Passed Table Stakes,Scoring - Completed Application,2024-07-22 13:57:03
-SQS-9624757398,"Marvin TEST, Awesome Charter",Marvin TEST,354204,m.m.espinoza.jr@gmail.com,School Quality Supports - Fall 2024 - Cohort,Awarded,N/A,2024-07-30 17:19:42
-SQS-4368971339,"Marvin TEST 2, Cool Charter",Marvin Espinoza-Leiva,348110,mespinozaleiva@greatschoolsnc.org,School Quality Supports - Fall 2024 - Cohort,Declined,Decline,2024-08-01 20:14:52
-SQS-C-1383977143,"Shauna, My School",S Bee,357095,shaunabell@gmail.com,School Quality Supports - Fall 2024 - Cohort,Declined,Decline,2024-08-15 20:39:19
-SQS-C-5216401765,"Marvin DRY RUN, Great New Charter School",TEST Reviewer TEST,354217,amarvintest@gmail.com,School Quality Supports - Fall 2024 - Cohort,Review and Score - Applications that Passed Table Stakes,Scoring - Completed Application,2024-08-27 17:40:27
+"application_id","application","applicant","applicant_id","application_email","program","current_stage","current_status","last_submitted","average_score","overall_score","weighted_score"
+"SQS-C-8493267618","Annaliet Echaniz, Doral Academy of North Carolina","Annaliet Echaniz","364007","aechaniz@doralacademync.com","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"SQS-C-1364745740","Dawn Arthur, RISE Charter","Dawn Arthur","364009","darthur@risese.org","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"NSL-FF-4443839050","Paul Barnhardt - Honor Prep","Paul Barnhardt","364037","paulbarnhardt@honorprep.org","Startup Grant","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"
+"SQS-C-5043556093","Thomas Mckoy, Reaching All Minds Academy","Thomas Mckoy","364062","tmckoy@reachingallminds.com","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"SQS-C-4685582565","Alex Quigley, Durham Charter School","Spencer Menzel","364065","smenzel@durhamcharter.org","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"SQS-C-4245919303","Donnell Cannon, Maureen Joy Charter School","Donnell Cannon","364077","dcannon@joycharter.org","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"NSL-FF-8946612775","Dr. Crystal Howe, G.O. B.I.G.","Crystal Howe","364081","crystal.howe@gobigcharlotte.org","Startup Grant","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"
+"NSL-FF-7021087462","Trip Cogburn, Carolina Acheive","Trip Cogburn","364082","tcogburn@carolina-achieve.org","Startup Grant","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"
+"SQS-C-9533849154","Tracy Wharton, Mountain Discovery Charter","Tracy Wharton","364098","twharton@mountaindiscovery.org","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"SQS-C-2422057350","Eric Sanchez, CEO, Henderson Collegiate","Alicia Hawk","364102","ashawk@hendersoncollegiate.org","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"SQS-C-2655789570","Wes Graner, STARS Charter","Wes Graner","364111","wgraner@starscharter.org","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"SQS-C-6678432125","Template Application","Katy Ridnouer","364235","katy@klrpartnersllc.com","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"NSL-FF-9919115883","Junlan Li, Triad International Studies Academy","Junlan Li","364265","junlan.li@tisanc.org","Startup Grant","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"
+"NSL-FF-4249331167","Joey Webb, West Triangle High School","Joey Webb","364285","joey.webb@westtriangle.org","Startup Grant","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"
+"SQS-C-5678357221","The Exploris School ","Jessica Roberts","364354","jroberts@exploris.org","School Quality Cohort","Task - Application Submission","Application Submitted","N/A","0.0","0.0","0.0"
+"NSL-FF-1684537044","Rashawn Meekins, Crossnore Community Charter School","Mariea Tountasakis","364375","mtountasakis@crossnore.org","Startup Grant","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"
+"NSL-FF-8732111496","DORIS TAYLOR","Doris Taylor","364413","taylord@aaacharter.org","Startup Grant","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"
+"NSL-FF-3296408233","Dominque Burgess, Burbrella Charter School","Dominque Burgess","364470","dburgess@burbrellaeducation.com","Founder's Fellowship","Task - Application Submission","Application Submission","N/A","0.0","0.0","0.0"

@@ -1,6 +1,8 @@
 # create source schema file for first staging model
 # write in powershell terminal: dbt run-operation generate_source --args '{"schema_name": "nc_school_database", "generate_columns": true}'
 
+version: 2
+
 sources:
   - name: nc_school_database
     tables:
@@ -15,6 +17,9 @@ sources:
           - name: current_stage
           - name: current_status
           - name: last_submitted
+          - name: average_score
+          - name: overall_score
+          - name: weighted_score
 
       - name: raw_nc_schools_active_report_sy_24_25
         columns:
@@ -102,6 +107,19 @@ sources:
           - name: record_created_by
           - name: last_changed_timestamp
           - name: last_changed_by
+
+      - name: raw_nc_schools_eds_sy_23_24
+        columns:
+          - name: reporting_year
+          - name: collection_code
+          - name: psu_code
+          - name: psu_name
+          - name: school_code
+          - name: school_name
+          - name: den
+          - name: pct_eds
+          - name: pct_nslp
+          - name: pct_nslp_adj
 
       - name: raw_nc_schools_enrollment_charter_race_gender_sy_21_22
         columns:
@@ -370,11 +388,49 @@ sources:
           - name: title_1
           - name: subgroup
           - name: spg_grade
+          - name: spg_score
+          - name: ach_score
+          - name: eg_score
+          - name: eg_status
+          - name: eg_index
+          - name: rd_spg_grade
+          - name: rd_spg_score
+          - name: rdgs_ach_score
+          - name: rd_eg_score
+          - name: rd_eg_status
+          - name: rd_eg_index
+          - name: ma_spg_grade
+          - name: ma_spg_score
+          - name: mags_ach_score
+          - name: ma_eg_score
+          - name: ma_eg_status
+          - name: ma_eg_index
+          - name: aaa_score
+          - name: scgs_score
+          - name: elp_score
+          - name: cgrs_score
+          - name: bi_score
+          - name: awa_score
+          - name: mcr_score
+          - name: asm_option
+          - name: k2_feeder
+          - name: use_3yr
+          - name: use_alt_weight
+
+      - name: raw_nc_schools_spg_subgroup_sy_23_24
+        columns:
+          - name: reporting_year
+          - name: lea_code
+          - name: lea_name
+          - name: school_code
+          - name: school_name
+          - name: sbe_region
+          - name: grade_span
+          - name: title_1
+          - name: subgroup
           - name: spg_grade
           - name: spg_score
           - name: ach_score
-          - name: ach_score
-          - name: eg_score
           - name: eg_score
           - name: eg_status
           - name: eg_index

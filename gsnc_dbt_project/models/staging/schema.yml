@@ -1,0 +1,703 @@
+## schema for staging models (basially: the "sources" file but for dbt staging models, instead of the raw source schema which is "sources.yml")
+
+#staging models - data models
+# to spit these out: [make sure to add all stg__table_name into the dbt run-operation]
+# dbt run-operation generate_model_yaml --args '{"model_names": ["stg__active_schools", "stg__enrollment_charter_race_gender", "stg__enrollment_traditional_race_gender", "stg__enrollment_schools_race_gender", "stg__performance_disagg", "stg__spg_overall", "stg__spg_subgroup"]}'
+# to just run the staging models:
+# dbt test --models models/staging/
+
+version: 2
+
+models:
+  - name: stg__active_schools
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+
+      - name: school_number
+        description: ""
+
+      - name: school_year
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: official_school_name
+        description: ""
+
+      - name: lea_number
+        description: ""
+
+      - name: lea_name
+        description: ""
+
+      - name: name_prefix_description
+        description: ""
+
+      - name: principal_first_name
+        description: ""
+
+      - name: principal_middle_name
+        description: ""
+
+      - name: principal_last_name
+        description: ""
+
+      - name: principal_name_suffix
+        description: ""
+
+      - name: principal_email
+        description: ""
+
+      - name: address_line1
+        description: ""
+
+      - name: address_line2
+        description: ""
+
+      - name: city
+        description: ""
+
+      - name: state
+        description: ""
+
+      - name: zip_code_5
+        description: ""
+
+      - name: zip_code_4
+        description: ""
+
+      - name: phone_office_area
+        description: ""
+
+      - name: phone_office_exch
+        description: ""
+
+      - name: phone_office_line
+        description: ""
+
+      - name: phone_fax_area
+        description: ""
+
+      - name: phone_fax_exch
+        description: ""
+
+      - name: phone_fax_line
+        description: ""
+
+      - name: mailing_address_line1
+        description: ""
+
+      - name: mailing_address_line2
+        description: ""
+
+      - name: mailing_city
+        description: ""
+
+      - name: mailing_state
+        description: ""
+
+      - name: mailing_zip_code_5
+        description: ""
+
+      - name: mailing_zip_code_4
+        description: ""
+
+      - name: url_school_address
+        description: ""
+
+      - name: sch_operational_status
+        description: ""
+
+      - name: sch_operational_status_desc
+        description: ""
+
+      - name: opening_effective_date
+        description: ""
+
+      - name: closing_date
+        description: ""
+
+      - name: school_type
+        description: ""
+
+      - name: school_type_desc
+        description: ""
+
+      - name: school_program_type
+        description: ""
+
+      - name: school_program_type_desc
+        description: ""
+
+      - name: grade_level_current
+        description: ""
+
+      - name: grade_level_approved
+        description: ""
+
+      - name: grade_level_first_year
+        description: ""
+
+      - name: title_i
+        description: ""
+
+      - name: school_calendar_type
+        description: ""
+
+      - name: school_calendar_description
+        description: ""
+
+      - name: extended_hours
+        description: ""
+
+      - name: school_schedule_type
+        description: ""
+
+      - name: school_schedule_type_desc
+        description: ""
+
+      - name: school_designation_type
+        description: ""
+
+      - name: school_designation_desc
+        description: ""
+
+      - name: virtual_status
+        description: ""
+
+      - name: sbe_region
+        description: ""
+
+      - name: sbe_region_names
+        description: ""
+
+      - name: accreditation_status
+        description: ""
+
+      - name: accreditation_status_desc
+        description: ""
+
+      - name: federal_school_number
+        description: ""
+
+      - name: college_board_number
+        description: ""
+
+      - name: school_membership
+        description: ""
+
+      - name: school_year_for_sch_membership
+        description: ""
+
+      - name: school_teacher_count
+        description: ""
+
+      - name: school_year_for_teachers
+        description: ""
+
+      - name: cooperative_innovative_hs
+        description: ""
+
+      - name: cooperative_mmyyyy_sbe_approve
+        description: ""
+
+      - name: first_yr_est_adm
+        description: ""
+
+      - name: first_yr_est_paid_teacher_fte
+        description: ""
+
+      - name: newly_constructed_facility
+        description: ""
+
+      - name: occupancy_date
+        description: ""
+
+      - name: what_facility_will_sch_occupy
+        description: ""
+
+      - name: share_space
+        description: ""
+
+      - name: share_space_describe
+        description: ""
+
+      - name: new_sch_population_from
+        description: ""
+
+      - name: list_of_closing_schools
+        description: ""
+
+      - name: county_code
+        description: ""
+
+      - name: county_description
+        description: ""
+
+      - name: opening_in_school_year
+        description: ""
+
+      - name: locale_type
+        description: ""
+
+      - name: locale_type_desc
+        description: ""
+
+      - name: school_closings
+        description: ""
+
+      - name: school_systartstatus
+        description: ""
+
+      - name: record_created_timestamp
+        description: ""
+
+      - name: record_created_by
+        description: ""
+
+      - name: last_changed_timestamp
+        description: ""
+
+      - name: last_changed_by
+        description: ""
+
+      - name: reporting_year
+        description: ""
+
+  - name: stg__enrollment_charter_race_gender
+    description: ""
+    columns:
+      - name: year
+        description: ""
+
+      - name: cs
+        description: ""
+
+      - name: charter_school_name
+        description: ""
+
+      - name: indianmale
+        description: ""
+
+      - name: indianfemale
+        description: ""
+
+      - name: asianmale
+        description: ""
+
+      - name: asianfemale
+        description: ""
+
+      - name: hispanicmale
+        description: ""
+
+      - name: hispanicfemale
+        description: ""
+
+      - name: blackmale
+        description: ""
+
+      - name: blackfemale
+        description: ""
+
+      - name: whitemale
+        description: ""
+
+      - name: whitefemale
+        description: ""
+
+      - name: two_or_more_racesmale
+        description: ""
+
+      - name: two_or_more_racesfemale
+        description: ""
+
+      - name: pacificislandmale
+        description: ""
+
+      - name: pacificislandfemale
+        description: ""
+
+      - name: total
+        description: ""
+
+      - name: reporting_year
+        description: ""
+
+      - name: school_type
+        description: ""
+
+  - name: stg__enrollment_traditional_race_gender
+    description: ""
+    columns:
+      - name: year
+        description: ""
+
+      - name: lea
+        description: ""
+
+      - name: ____lea_name____
+        description: ""
+
+      - name: school
+        description: ""
+
+      - name: ___school_name___
+        description: ""
+
+      - name: indian_male
+        description: ""
+
+      - name: indian_female
+        description: ""
+
+      - name: asian_male
+        description: ""
+
+      - name: asian_female
+        description: ""
+
+      - name: hispanic_male
+        description: ""
+
+      - name: hispanic_female
+        description: ""
+
+      - name: black_male
+        description: ""
+
+      - name: black_female
+        description: ""
+
+      - name: white_male
+        description: ""
+
+      - name: white_female
+        description: ""
+
+      - name: pacific_island_male
+        description: ""
+
+      - name: pacific_island_female
+        description: ""
+
+      - name: two_or__more_male
+        description: ""
+
+      - name: two_or__more_female
+        description: ""
+
+      - name: total
+        description: ""
+
+      - name: reporting_year
+        description: ""
+
+      - name: school_type
+        description: ""
+
+  - name: stg__enrollment_schools_race_gender
+    description: ""
+    columns:
+      - name: lea
+        description: ""
+
+      - name: school
+        description: ""
+
+      - name: district_name
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: indian_male
+        description: ""
+
+      - name: indian_female
+        description: ""
+
+      - name: asian_male
+        description: ""
+
+      - name: asian_female
+        description: ""
+
+      - name: hispanic_male
+        description: ""
+
+      - name: hispanic_female
+        description: ""
+
+      - name: black_male
+        description: ""
+
+      - name: black_female
+        description: ""
+
+      - name: white_male
+        description: ""
+
+      - name: white_female
+        description: ""
+
+      - name: pacific_island_female
+        description: ""
+
+      - name: pacific_island_male
+        description: ""
+
+      - name: two_or__more_male
+        description: ""
+
+      - name: two_or__more_female
+        description: ""
+
+      - name: total
+        description: ""
+
+      - name: reporting_year
+        description: ""
+
+      - name: school_type
+        description: ""
+
+  - name: stg__performance_disagg
+    description: ""
+    columns:
+      - name: school_code
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: grade_span
+        description: ""
+
+      - name: subject
+        description: ""
+
+      - name: grade
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: subgroup
+        description: ""
+
+      - name: num_tested
+        description: ""
+
+      - name: pct_notprof
+        description: ""
+
+      - name: pct_l3
+        description: ""
+
+      - name: pct_l4
+        description: ""
+
+      - name: pct_l5
+        description: ""
+
+      - name: pct_ccr
+        description: ""
+
+      - name: pct_glp
+        description: ""
+
+      - name: avg_score
+        description: ""
+
+      - name: reporting_year
+        description: ""
+
+  - name: stg__spg_overall
+    description: ""
+    columns:
+      - name: district_name
+        description: ""
+
+      - name: school_code
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: state_board_region
+        description: ""
+
+      - name: grade_span
+        description: ""
+
+      - name: title_one_served
+        description: ""
+
+      - name: percent_eds
+        description: ""
+
+      - name: school_performance_grade
+        description: ""
+
+      - name: school_performance_score
+        description: ""
+
+      - name: school_achievement_score
+        description: ""
+
+      - name: school_growth_score
+        description: ""
+
+      - name: school_growth_status
+        description: ""
+
+      - name: school_growth_index
+        description: ""
+
+      - name: academic_assessment_math_rdg
+        description: ""
+
+      - name: science_eog_score
+        description: ""
+
+      - name: english_learner_progress_score
+        description: ""
+
+      - name: four_year_cohort_graduation_rate_score
+        description: ""
+
+      - name: biology_eoc_score
+        description: ""
+
+      - name: act_workkeys_assessment
+        description: ""
+
+      - name: passing_nc_math_three_course_score
+        description: ""
+
+      - name: reporting_year
+        description: ""
+
+  - name: stg__spg_subgroup
+    description: ""
+    columns:
+      - name: reporting_year
+        description: ""
+
+      - name: lea_code
+        description: ""
+
+      - name: lea_name
+        description: ""
+
+      - name: school_code
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: sbe_region
+        description: ""
+
+      - name: grade_span
+        description: ""
+
+      - name: title_1
+        description: ""
+
+      - name: subgroup
+        description: ""
+
+      - name: spg_grade
+        description: ""
+
+      - name: spg_score
+        description: ""
+
+      - name: ach_score
+        description: ""
+
+      - name: eg_score
+        description: ""
+
+      - name: eg_status
+        description: ""
+
+      - name: eg_index
+        description: ""
+
+      - name: rd_spg_grade
+        description: ""
+
+      - name: rd_spg_score
+        description: ""
+
+      - name: rdgs_ach_score
+        description: ""
+
+      - name: rd_eg_score
+        description: ""
+
+      - name: rd_eg_status
+        description: ""
+
+      - name: rd_eg_index
+        description: ""
+
+      - name: ma_spg_grade
+        description: ""
+
+      - name: ma_spg_score
+        description: ""
+
+      - name: mags_ach_score
+        description: ""
+
+      - name: ma_eg_score
+        description: ""
+
+      - name: ma_eg_status
+        description: ""
+
+      - name: ma_eg_index
+        description: ""
+
+      - name: aaa_score
+        description: ""
+
+      - name: scgs_score
+        description: ""
+
+      - name: elp_score
+        description: ""
+
+      - name: cgrs_score
+        description: ""
+
+      - name: bi_score
+        description: ""
+
+      - name: awa_score
+        description: ""
+
+      - name: mcr_score
+        description: ""
+
+      - name: asm_option
+        description: ""
+
+      - name: k2_feeder
+        description: ""
+
+      - name: use_3yr
+        description: ""
+
+      - name: use_alt_weight
+        description: ""
+
+      - name: reporting_year_use
+        description: ""
