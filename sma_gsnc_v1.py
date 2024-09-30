@@ -1,6 +1,7 @@
 #python file: sma_gsnc_v1.py
 #specific path: C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\sma_gsnc_v1.py
 #need to run within python virtual environment: C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\env_311\Scripts\python.exe
+#when you run into authorization issues, go back to gsnc website, click on gear, go to integrations, and click on "refresh credentials"
 
 import requests
 import yaml

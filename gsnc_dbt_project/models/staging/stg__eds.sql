@@ -40,10 +40,34 @@ WITH raw_source AS (
 	CASE
     	when length(school_code) < 6 THEN concat('0', school_code)
         else school_code
-    END as school_code_use,
+    END as school_code_use_temp,
     FROM {{ source('nc_school_database', table) }}
+	WHERE
+		school_code NOT LIKE "%school_code%"
     {% if not loop.last %}UNION ALL{% endif %}
   {% endfor %}
+),
+
+raw_source2 as (
+	SELECT
+		*,
+		CASE
+			when school_code_use_temp like '%+%' then concat(psu_code,"000") -- pine lake prep because of 49E with 000, turns into exponential form of a number
+			else school_code_use_temp
+		END as school_code_use
+	FROM raw_source
 )
 
-SELECT * FROM raw_source
+select
+	reporting_year as eds_dpi_report_year,
+	collection_code,
+	psu_code,
+	psu_name,
+	school_name,
+	den,
+	pct_eds,
+	pct_nslp,
+	pct_nslp_adj,
+	reporting_year_use as reporting_year,
+	school_code_use as school_code
+from raw_source2

@@ -27,10 +27,27 @@ WITH raw_source AS (
   {% for table in tables %}
     SELECT
       *,
-      SUBSTR('{{ table }}', -5, 2) || '-' || SUBSTR('{{ table }}', -2, 2) AS reporting_year
+      SUBSTR('{{ table }}', -5, 2) || '-' || SUBSTR('{{ table }}', -2, 2) AS reporting_year,
+	CASE
+    	when length(School_Number) < 6 THEN concat('0', School_Number)
+        else School_Number
+    END as school_code,
     FROM {{ source('nc_school_database', table) }}
     {% if not loop.last %}UNION ALL{% endif %}
   {% endfor %}
+),
+
+raw_source2 as (
+
+	SELECT
+		*,
+		CASE
+			when school_code like '%+%' then concat(SUBSTR(Primary_Key, 1, 3),"000") -- pine lake prep because of 49E with 000, turns into exponential form of a number
+			else school_code
+		END as school_code_use
+	FROM raw_source
+
 )
 
-SELECT * FROM raw_source
+select * from raw_source2 where length(school_code_use) is not null
+

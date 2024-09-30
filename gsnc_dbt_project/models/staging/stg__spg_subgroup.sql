@@ -27,8 +27,21 @@ WITH raw_source AS (
   {% for table in tables %}
     SELECT
       *,
-      SUBSTR('{{ table }}', -5, 2) || '-' || SUBSTR('{{ table }}', -2, 2) AS reporting_year_use
+      SUBSTR('{{ table }}', -5, 2) || '-' || SUBSTR('{{ table }}', -2, 2) AS reporting_year_use,
+
+	  CASE
+		when length(lea_code) < 3 then concat("0",lea_code)
+		else lea_code
+	  END as LEA_use,
+
+	  CASE
+	  	when length(School_code) < 6 then concat("0",School_code)
+	  END as School_code_use
+
     FROM {{ source('nc_school_database', table) }}
+	WHERE
+		lea_code NOT LIKE '%lea%'
+		and length(lea_code) is not null
     {% if not loop.last %}UNION ALL{% endif %}
   {% endfor %}
 )

@@ -3,8 +3,9 @@
 #staging models - data models
 # to spit these out:
 # dbt run-operation generate_model_yaml --args '{"model_names": ["int__perf_disagg_wide", "int__spg_subgroup_wide"]}'
-# to just run the staging models:
+# to just run the tests for staging models:
 # dbt test --models models/intermediate/
+# to just run staging models: dbt run --select intermediate
 
 version: 2
 

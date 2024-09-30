@@ -1,5 +1,6 @@
 # create source schema file for first staging model
 # write in powershell terminal: dbt run-operation generate_source --args '{"schema_name": "nc_school_database", "generate_columns": true}'
+#to just run staging models: dbt run --select staging
 
 version: 2
 

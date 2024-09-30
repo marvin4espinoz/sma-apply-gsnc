@@ -267,6 +267,9 @@ models:
       - name: reporting_year
         description: ""
 
+      - name: school_code
+        description: ""
+
   - name: stg__enrollment_charter_race_gender
     description: ""
     columns:
@@ -402,7 +405,13 @@ models:
   - name: stg__enrollment_schools_race_gender
     description: ""
     columns:
+      - name: lea_use
+        description: ""
+
       - name: lea
+        description: ""
+
+      - name: school_use
         description: ""
 
       - name: school
@@ -700,4 +709,40 @@ models:
         description: ""
 
       - name: reporting_year_use
+        description: ""
+
+  - name: stg__eds
+    description: ""
+    columns:
+      - name: eds_dpi_report_year
+        description: ""
+
+      - name: collection_code
+        description: ""
+
+      - name: psu_code
+        description: ""
+
+      - name: psu_name
+        description: ""
+
+      - name: school_name
+        description: ""
+
+      - name: den
+        description: ""
+
+      - name: pct_eds
+        description: ""
+
+      - name: pct_nslp
+        description: ""
+
+      - name: pct_nslp_adj
+        description: ""
+
+      - name: reporting_year
+        description: ""
+
+      - name: school_code
         description: ""

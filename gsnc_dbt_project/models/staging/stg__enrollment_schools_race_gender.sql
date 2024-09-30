@@ -5,7 +5,17 @@
 with traditional as (
 
     select
-        LEA,
+        CASE
+			when length(LEA) = 1 then concat("00",LEA)
+			when length(LEA) = 2 then concat("0",LEA)
+			else LEA
+		END as LEA_use,
+		LEA,
+		CASE
+			when length(School) = 1 then concat("00",School)
+			when length(School) = 2 then concat("0",School)
+			else School
+		END as School_use,
         School,
         ____LEA_Name____ as district_name,
         ___School_Name___ as school_name,
@@ -33,7 +43,9 @@ with traditional as (
 charter as (
 
     select
-        CS as LEA,
+        CS as LEA_use,
+		CS as LEA,
+		"000" as School_use,
         '000' as School,
         'Charter LEA' as district_name,
         Charter_School_Name as school_name,
