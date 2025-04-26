@@ -2,9 +2,9 @@
 #path to this file: C:\Users\MarvinEspinoza-Leiva\github-repo-folder\sma-apply-gsnc\connect.yml
 
 server: "https://gsnc.smapply.us"
-clientId: 'XMiwNcm08erf2w0hUqu7Gy42CyoAFyrrsfxEAz0o'
-clientSecret: 'uXkxdVF42G0Yd6t4ssXgxyj1oBIOGbzVRRia9rYxQIoIqWXER3Wz6gOCGQJQmkvgXgOIC58KuLiUzDLxuMNtLhKDLv5VbAImQ7gfw6af5AOAxvfVzqiLr2ds81DuDQxz'
-refreshToken: 'ba2b296158f97f6461260f33ab7417bd10009e62'
-accessToken: '66d4156d70dfa5ca15d0378199110ef0649e10fa'
+clientId: ''
+clientSecret: ''
+refreshToken: ''
+accessToken: ''
 
 # base_url = 'https://gsnc.smapply.com/api/programs/'
